@@ -5,41 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>H2O Innovation - Tech Stack</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a0f1a 0%, #1a1f2e 100%);
+      color: #ffffff;
       min-height: 100vh;
-      padding: 40px 20px;
-      color: #fff;
+      padding: 20px;
     }
     .container { max-width: 1400px; margin: 0 auto; }
     h1 {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 10px;
-      background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+      background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     .subtitle {
       text-align: center;
-      color: #888;
+      color: #8899aa;
       margin-bottom: 40px;
       font-size: 1.1rem;
     }
     .stats {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 40px;
       margin-bottom: 40px;
-      flex-wrap: wrap;
     }
     .stat {
-      background: rgba(255,255,255,0.05);
-      padding: 20px 40px;
-      border-radius: 12px;
       text-align: center;
+      padding: 20px 40px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.1);
     }
     .stat-number {
@@ -47,55 +47,38 @@
       font-weight: bold;
       color: #00d4ff;
     }
-    .stat-label { color: #888; margin-top: 5px; }
+    .stat-label {
+      color: #8899aa;
+      margin-top: 8px;
+    }
     .tabs {
       display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 40px;
+      gap: 10px;
       flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
     }
     .tab {
       padding: 12px 24px;
       background: rgba(255,255,255,0.05);
-      border: 2px solid rgba(255,255,255,0.1);
-      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: all 0.3s;
       font-size: 0.95rem;
-      text-transform: capitalize;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
     .tab:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(0,212,255,0.5);
+      background: rgba(0,212,255,0.1);
+      border-color: #00d4ff;
     }
     .tab.active {
       background: #00d4ff;
-      color: #1a1a2e;
-      border-color: #00d4ff;
+      color: #0a0f1a;
       font-weight: bold;
-    }
-    .search-container {
-      max-width: 500px;
-      margin: 0 auto 40px;
-    }
-    .search-input {
-      width: 100%;
-      padding: 16px 24px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 50px;
-      background: rgba(255,255,255,0.1);
-      color: #fff;
-      outline: none;
-      border: 2px solid transparent;
-      transition: all 0.3s ease;
-    }
-    .search-input:focus {
       border-color: #00d4ff;
-      background: rgba(255,255,255,0.15);
     }
-    .search-input::placeholder { color: #666; }
     .category-section {
       display: none;
     }
@@ -105,28 +88,33 @@
     .category-title {
       font-size: 1.8rem;
       margin-bottom: 20px;
-      text-align: center;
       color: #00d4ff;
-      text-transform: capitalize;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
       gap: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
     .card {
-      background: rgba(255,255,255,0.05);
-      border-radius: 16px;
-      padding: 24px 16px;
-      text-align: center;
-      transition: all 0.3s ease;
+      background: rgba(255,255,255,0.03);
       border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s;
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 140px;
     }
     .card:hover {
       transform: translateY(-5px);
-      background: rgba(255,255,255,0.1);
+      background: rgba(0,212,255,0.1);
       border-color: #00d4ff;
       box-shadow: 0 10px 30px rgba(0,212,255,0.2);
     }
@@ -161,822 +149,65 @@
     
     <div class="stats">
       <div class="stat">
-        <div class="stat-number">161</div>
+        <div class="stat-number">94</div>
         <div class="stat-label">Tecnologias</div>
       </div>
       <div class="stat">
-        <div class="stat-number">144</div>
+        <div class="stat-number">145</div>
         <div class="stat-label">Repositórios</div>
-      </div>
-      <div class="stat">
-        <div class="stat-number">8</div>
-        <div class="stat-label">Categorias</div>
       </div>
     </div>
     
     <div class="tabs">
       <div class="tab active" data-category="all">Todas</div>
-      <div class="tab" data-category="languages">linguagens de programação (19)</div>
-            <div class="tab" data-category="ai">ai (12)</div>
-            <div class="tab" data-category="frontend">frontend (6)</div>
-            <div class="tab" data-category="backend">backend (5)</div>
-            <div class="tab" data-category="database">database (9)</div>
-            <div class="tab" data-category="devops">devops (7)</div>
-            <div class="tab" data-category="tools">tools (93)</div>
-            <div class="tab" data-category="geo">geo (10)</div>
+      <div class="tab" data-category="languages">linguagens de programação (5)</div>
+      <div class="tab" data-category="ai">ai (15)</div>
+      <div class="tab" data-category="frontend">frontend (6)</div>
+      <div class="tab" data-category="backend">backend (5)</div>
+      <div class="tab" data-category="database">database (4)</div>
+      <div class="tab" data-category="devops">devops (5)</div>
+      <div class="tab" data-category="tools">tools (43)</div>
+      <div class="tab" data-category="geo">geo (11)</div>
     </div>
     
-    <div class="search-container">
-      <input type="text" class="search-input" placeholder="🔍 Buscar tecnologia..." id="search">
-    </div>
-    
-    <div id="all-section" class="category-section active">
-      <div class="category-title">linguagens de programação</div>
-<div class="grid">
-  <div class="card" data-name="c" data-category="languages">
-  <img src="imagens/languages/c.svg" alt="C" loading="lazy">
-  <div class="card-name">C</div>
-</div>
-<div class="card" data-name="css" data-category="languages">
-  <img src="imagens/languages/css.svg" alt="Css" loading="lazy">
-  <div class="card-name">Css</div>
-</div>
-<div class="card" data-name="go" data-category="languages">
-  <img src="imagens/languages/go.svg" alt="Go" loading="lazy">
-  <div class="card-name">Go</div>
-</div>
-<div class="card" data-name="groovy" data-category="languages">
-  <img src="imagens/languages/groovy.svg" alt="Groovy" loading="lazy">
-  <div class="card-name">Groovy</div>
-</div>
-<div class="card" data-name="html" data-category="languages">
-  <img src="imagens/languages/html.svg" alt="Html" loading="lazy">
-  <div class="card-name">Html</div>
-</div>
-<div class="card" data-name="java" data-category="languages">
-  <img src="imagens/languages/java.svg" alt="Java" loading="lazy">
-  <div class="card-name">Java</div>
-</div>
-<div class="card" data-name="javascript" data-category="languages">
-  <img src="imagens/languages/javascript.svg" alt="Javascript" loading="lazy">
-  <div class="card-name">Javascript</div>
-</div>
-<div class="card" data-name="jupyter notebook" data-category="languages">
-  <img src="imagens/languages/jupyter_notebook.svg" alt="Jupyter Notebook" loading="lazy">
-  <div class="card-name">Jupyter Notebook</div>
-</div>
-<div class="card" data-name="kotlin" data-category="languages">
-  <img src="imagens/languages/kotlin.svg" alt="Kotlin" loading="lazy">
-  <div class="card-name">Kotlin</div>
-</div>
-<div class="card" data-name="lua" data-category="languages">
-  <img src="imagens/languages/lua.svg" alt="Lua" loading="lazy">
-  <div class="card-name">Lua</div>
-</div>
-<div class="card" data-name="objective-c" data-category="languages">
-  <img src="imagens/languages/objective-c.svg" alt="Objective-c" loading="lazy">
-  <div class="card-name">Objective-c</div>
-</div>
-<div class="card" data-name="php" data-category="languages">
-  <img src="imagens/languages/php.svg" alt="Php" loading="lazy">
-  <div class="card-name">Php</div>
-</div>
-<div class="card" data-name="powershell" data-category="languages">
-  <img src="imagens/languages/powershell.svg" alt="Powershell" loading="lazy">
-  <div class="card-name">Powershell</div>
-</div>
-<div class="card" data-name="python" data-category="languages">
-  <img src="imagens/languages/python.svg" alt="Python" loading="lazy">
-  <div class="card-name">Python</div>
-</div>
-<div class="card" data-name="r" data-category="languages">
-  <img src="imagens/languages/r.svg" alt="R" loading="lazy">
-  <div class="card-name">R</div>
-</div>
-<div class="card" data-name="ruby" data-category="languages">
-  <img src="imagens/languages/ruby.svg" alt="Ruby" loading="lazy">
-  <div class="card-name">Ruby</div>
-</div>
-<div class="card" data-name="shell" data-category="languages">
-  <img src="imagens/languages/shell.svg" alt="Shell" loading="lazy">
-  <div class="card-name">Shell</div>
-</div>
-<div class="card" data-name="swift" data-category="languages">
-  <img src="imagens/languages/swift.svg" alt="Swift" loading="lazy">
-  <div class="card-name">Swift</div>
-</div>
-<div class="card" data-name="typescript" data-category="languages">
-  <img src="imagens/languages/typescript.svg" alt="Typescript" loading="lazy">
-  <div class="card-name">Typescript</div>
-</div>
-
-</div>
-
-            <div class="category-title">ai</div>
-<div class="grid">
-  <div class="card" data-name="anthropic" data-category="ai">
-  <img src="imagens/ai/anthropic.svg" alt="Anthropic" loading="lazy">
-  <div class="card-name">Anthropic</div>
-</div>
-<div class="card" data-name="chatgpt" data-category="ai">
-  <img src="imagens/ai/chatgpt.svg" alt="Chatgpt" loading="lazy">
-  <div class="card-name">Chatgpt</div>
-</div>
-<div class="card" data-name="claude haiku 4.5" data-category="ai">
-  <img src="imagens/ai/claude_haiku_4.5.svg" alt="Claude Haiku 4.5" loading="lazy">
-  <div class="card-name">Claude Haiku 4.5</div>
-</div>
-<div class="card" data-name="claude opus 4.5" data-category="ai">
-  <img src="imagens/ai/claude_opus_4.5.svg" alt="Claude Opus 4.5" loading="lazy">
-  <div class="card-name">Claude Opus 4.5</div>
-</div>
-<div class="card" data-name="claude sonnet 4" data-category="ai">
-  <img src="imagens/ai/claude_sonnet_4.svg" alt="Claude Sonnet 4" loading="lazy">
-  <div class="card-name">Claude Sonnet 4</div>
-</div>
-<div class="card" data-name="claude sonnet 4.5" data-category="ai">
-  <img src="imagens/ai/claude_sonnet_4.5.svg" alt="Claude Sonnet 4.5" loading="lazy">
-  <div class="card-name">Claude Sonnet 4.5</div>
-</div>
-<div class="card" data-name="gemini 2.5 pro" data-category="ai">
-  <img src="imagens/ai/gemini_2.5_pro.svg" alt="Gemini 2.5 Pro" loading="lazy">
-  <div class="card-name">Gemini 2.5 Pro</div>
-</div>
-<div class="card" data-name="gemini 3 flash" data-category="ai">
-  <img src="imagens/ai/gemini_3_flash.svg" alt="Gemini 3 Flash" loading="lazy">
-  <div class="card-name">Gemini 3 Flash</div>
-</div>
-<div class="card" data-name="google ai" data-category="ai">
-  <img src="imagens/ai/google_ai.svg" alt="Google Ai" loading="lazy">
-  <div class="card-name">Google Ai</div>
-</div>
-<div class="card" data-name="openai" data-category="ai">
-  <img src="imagens/ai/openai.svg" alt="Openai" loading="lazy">
-  <div class="card-name">Openai</div>
-</div>
-<div class="card" data-name="pytorch" data-category="ai">
-  <img src="imagens/ai/pytorch.svg" alt="Pytorch" loading="lazy">
-  <div class="card-name">Pytorch</div>
-</div>
-<div class="card" data-name="scikit-learn" data-category="ai">
-  <img src="imagens/ai/scikit-learn.svg" alt="Scikit-learn" loading="lazy">
-  <div class="card-name">Scikit-learn</div>
-</div>
-
-</div>
-
-            <div class="category-title">frontend</div>
-<div class="grid">
-  <div class="card" data-name="angular" data-category="frontend">
-  <img src="imagens/frontend/angular.svg" alt="Angular" loading="lazy">
-  <div class="card-name">Angular</div>
-</div>
-<div class="card" data-name="ant design" data-category="tools">
-  <img src="imagens/frontend/ant_design.svg" alt="Ant Design" loading="lazy">
-  <div class="card-name">Ant Design</div>
-</div>
-<div class="card" data-name="bootstrap" data-category="tools">
-  <img src="imagens/frontend/bootstrap.svg" alt="Bootstrap" loading="lazy">
-  <div class="card-name">Bootstrap</div>
-</div>
-<div class="card" data-name="cypress" data-category="tools">
-  <img src="imagens/frontend/cypress.svg" alt="Cypress" loading="lazy">
-  <div class="card-name">Cypress</div>
-</div>
-<div class="card" data-name="esbuild" data-category="tools">
-  <img src="imagens/frontend/esbuild.svg" alt="Esbuild" loading="lazy">
-  <div class="card-name">Esbuild</div>
-</div>
-<div class="card" data-name="expo" data-category="frontend">
-  <img src="imagens/frontend/expo.svg" alt="Expo" loading="lazy">
-  <div class="card-name">Expo</div>
-</div>
-<div class="card" data-name="inertia.js" data-category="tools">
-  <img src="imagens/frontend/inertia.js.svg" alt="Inertia.js" loading="lazy">
-  <div class="card-name">Inertia.js</div>
-</div>
-<div class="card" data-name="jest" data-category="tools">
-  <img src="imagens/frontend/jest.svg" alt="Jest" loading="lazy">
-  <div class="card-name">Jest</div>
-</div>
-<div class="card" data-name="leaflet" data-category="geo">
-  <img src="imagens/frontend/leaflet.svg" alt="Leaflet" loading="lazy">
-  <div class="card-name">Leaflet</div>
-</div>
-<div class="card" data-name="next.js" data-category="frontend">
-  <img src="imagens/frontend/next.js.svg" alt="Next.js" loading="lazy">
-  <div class="card-name">Next.js</div>
-</div>
-<div class="card" data-name="openlayers" data-category="geo">
-  <img src="imagens/frontend/openlayers.svg" alt="Openlayers" loading="lazy">
-  <div class="card-name">Openlayers</div>
-</div>
-<div class="card" data-name="postcss" data-category="tools">
-  <img src="imagens/frontend/postcss.svg" alt="Postcss" loading="lazy">
-  <div class="card-name">Postcss</div>
-</div>
-<div class="card" data-name="react" data-category="frontend">
-  <img src="imagens/frontend/react.svg" alt="React" loading="lazy">
-  <div class="card-name">React</div>
-</div>
-<div class="card" data-name="react native" data-category="frontend">
-  <img src="imagens/frontend/react_native.svg" alt="React Native" loading="lazy">
-  <div class="card-name">React Native</div>
-</div>
-<div class="card" data-name="redux" data-category="tools">
-  <img src="imagens/frontend/redux.svg" alt="Redux" loading="lazy">
-  <div class="card-name">Redux</div>
-</div>
-<div class="card" data-name="storybook" data-category="tools">
-  <img src="imagens/frontend/storybook.svg" alt="Storybook" loading="lazy">
-  <div class="card-name">Storybook</div>
-</div>
-<div class="card" data-name="styled components" data-category="tools">
-  <img src="imagens/frontend/styled_components.svg" alt="Styled Components" loading="lazy">
-  <div class="card-name">Styled Components</div>
-</div>
-<div class="card" data-name="tailwind css" data-category="tools">
-  <img src="imagens/frontend/tailwind_css.svg" alt="Tailwind Css" loading="lazy">
-  <div class="card-name">Tailwind Css</div>
-</div>
-<div class="card" data-name="testing library" data-category="tools">
-  <img src="imagens/frontend/testing_library.svg" alt="Testing Library" loading="lazy">
-  <div class="card-name">Testing Library</div>
-</div>
-<div class="card" data-name="vite" data-category="tools">
-  <img src="imagens/frontend/vite.svg" alt="Vite" loading="lazy">
-  <div class="card-name">Vite</div>
-</div>
-<div class="card" data-name="vue.js" data-category="frontend">
-  <img src="imagens/frontend/vue.js.svg" alt="Vue.js" loading="lazy">
-  <div class="card-name">Vue.js</div>
-</div>
-<div class="card" data-name="webpack" data-category="tools">
-  <img src="imagens/frontend/webpack.svg" alt="Webpack" loading="lazy">
-  <div class="card-name">Webpack</div>
-</div>
-<div class="card" data-name="zod" data-category="tools">
-  <img src="imagens/frontend/zod.svg" alt="Zod" loading="lazy">
-  <div class="card-name">Zod</div>
-</div>
-<div class="card" data-name="zustand" data-category="tools">
-  <img src="imagens/frontend/zustand.svg" alt="Zustand" loading="lazy">
-  <div class="card-name">Zustand</div>
-</div>
-
-</div>
-
-            <div class="category-title">backend</div>
-<div class="grid">
-  <div class="card" data-name="active model serializers" data-category="tools">
-  <img src="imagens/backend/active_model_serializers.svg" alt="Active Model Serializers" loading="lazy">
-  <div class="card-name">Active Model Serializers</div>
-</div>
-<div class="card" data-name="celery" data-category="tools">
-  <img src="imagens/backend/celery.svg" alt="Celery" loading="lazy">
-  <div class="card-name">Celery</div>
-</div>
-<div class="card" data-name="class-validator" data-category="tools">
-  <img src="imagens/backend/class-validator.svg" alt="Class-validator" loading="lazy">
-  <div class="card-name">Class-validator</div>
-</div>
-<div class="card" data-name="devise" data-category="tools">
-  <img src="imagens/backend/devise.svg" alt="Devise" loading="lazy">
-  <div class="card-name">Devise</div>
-</div>
-<div class="card" data-name="factory bot" data-category="tools">
-  <img src="imagens/backend/factory_bot.svg" alt="Factory Bot" loading="lazy">
-  <div class="card-name">Factory Bot</div>
-</div>
-<div class="card" data-name="fastapi" data-category="backend">
-  <img src="imagens/backend/fastapi.svg" alt="Fastapi" loading="lazy">
-  <div class="card-name">Fastapi</div>
-</div>
-<div class="card" data-name="flask" data-category="backend">
-  <img src="imagens/backend/flask.svg" alt="Flask" loading="lazy">
-  <div class="card-name">Flask</div>
-</div>
-<div class="card" data-name="laravel" data-category="backend">
-  <img src="imagens/backend/laravel.svg" alt="Laravel" loading="lazy">
-  <div class="card-name">Laravel</div>
-</div>
-<div class="card" data-name="laravel nova" data-category="tools">
-  <img src="imagens/backend/laravel_nova.svg" alt="Laravel Nova" loading="lazy">
-  <div class="card-name">Laravel Nova</div>
-</div>
-<div class="card" data-name="laravel sanctum" data-category="tools">
-  <img src="imagens/backend/laravel_sanctum.svg" alt="Laravel Sanctum" loading="lazy">
-  <div class="card-name">Laravel Sanctum</div>
-</div>
-<div class="card" data-name="laravel telescope" data-category="tools">
-  <img src="imagens/backend/laravel_telescope.svg" alt="Laravel Telescope" loading="lazy">
-  <div class="card-name">Laravel Telescope</div>
-</div>
-<div class="card" data-name="mockery" data-category="tools">
-  <img src="imagens/backend/mockery.svg" alt="Mockery" loading="lazy">
-  <div class="card-name">Mockery</div>
-</div>
-<div class="card" data-name="mongoose" data-category="tools">
-  <img src="imagens/backend/mongoose.svg" alt="Mongoose" loading="lazy">
-  <div class="card-name">Mongoose</div>
-</div>
-<div class="card" data-name="nestjs" data-category="backend">
-  <img src="imagens/backend/nestjs.svg" alt="Nestjs" loading="lazy">
-  <div class="card-name">Nestjs</div>
-</div>
-<div class="card" data-name="node.js" data-category="tools">
-  <img src="imagens/backend/node.js.svg" alt="Node.js" loading="lazy">
-  <div class="card-name">Node.js</div>
-</div>
-<div class="card" data-name="prisma" data-category="tools">
-  <img src="imagens/backend/prisma.svg" alt="Prisma" loading="lazy">
-  <div class="card-name">Prisma</div>
-</div>
-<div class="card" data-name="pundit" data-category="tools">
-  <img src="imagens/backend/pundit.svg" alt="Pundit" loading="lazy">
-  <div class="card-name">Pundit</div>
-</div>
-<div class="card" data-name="pydantic" data-category="tools">
-  <img src="imagens/backend/pydantic.svg" alt="Pydantic" loading="lazy">
-  <div class="card-name">Pydantic</div>
-</div>
-<div class="card" data-name="rspec" data-category="tools">
-  <img src="imagens/backend/rspec.svg" alt="Rspec" loading="lazy">
-  <div class="card-name">Rspec</div>
-</div>
-<div class="card" data-name="ruby on rails" data-category="backend">
-  <img src="imagens/backend/ruby_on_rails.svg" alt="Ruby On Rails" loading="lazy">
-  <div class="card-name">Ruby On Rails</div>
-</div>
-<div class="card" data-name="sidekiq" data-category="tools">
-  <img src="imagens/backend/sidekiq.svg" alt="Sidekiq" loading="lazy">
-  <div class="card-name">Sidekiq</div>
-</div>
-<div class="card" data-name="spatie packages" data-category="tools">
-  <img src="imagens/backend/spatie_packages.svg" alt="Spatie Packages" loading="lazy">
-  <div class="card-name">Spatie Packages</div>
-</div>
-<div class="card" data-name="sqlalchemy" data-category="tools">
-  <img src="imagens/backend/sqlalchemy.svg" alt="Sqlalchemy" loading="lazy">
-  <div class="card-name">Sqlalchemy</div>
-</div>
-<div class="card" data-name="supertest" data-category="tools">
-  <img src="imagens/backend/supertest.svg" alt="Supertest" loading="lazy">
-  <div class="card-name">Supertest</div>
-</div>
-<div class="card" data-name="typeorm" data-category="tools">
-  <img src="imagens/backend/typeorm.svg" alt="Typeorm" loading="lazy">
-  <div class="card-name">Typeorm</div>
-</div>
-
-</div>
-
-            <div class="category-title">database</div>
-<div class="grid">
-  <div class="card" data-name="firebase" data-category="database">
-  <img src="imagens/database/firebase.svg" alt="Firebase" loading="lazy">
-  <div class="card-name">Firebase</div>
-</div>
-<div class="card" data-name="influxdb" data-category="database">
-  <img src="imagens/database/influxdb.svg" alt="Influxdb" loading="lazy">
-  <div class="card-name">Influxdb</div>
-</div>
-<div class="card" data-name="minio" data-category="database">
-  <img src="imagens/database/minio.svg" alt="Minio" loading="lazy">
-  <div class="card-name">Minio</div>
-</div>
-<div class="card" data-name="mongodb" data-category="database">
-  <img src="imagens/database/mongodb.svg" alt="Mongodb" loading="lazy">
-  <div class="card-name">Mongodb</div>
-</div>
-<div class="card" data-name="mysql" data-category="database">
-  <img src="imagens/database/mysql.svg" alt="Mysql" loading="lazy">
-  <div class="card-name">Mysql</div>
-</div>
-<div class="card" data-name="postgresql" data-category="database">
-  <img src="imagens/database/postgresql.svg" alt="Postgresql" loading="lazy">
-  <div class="card-name">Postgresql</div>
-</div>
-<div class="card" data-name="prometheus" data-category="database">
-  <img src="imagens/database/prometheus.svg" alt="Prometheus" loading="lazy">
-  <div class="card-name">Prometheus</div>
-</div>
-<div class="card" data-name="redis" data-category="database">
-  <img src="imagens/database/redis.svg" alt="Redis" loading="lazy">
-  <div class="card-name">Redis</div>
-</div>
-<div class="card" data-name="sql server" data-category="database">
-  <img src="imagens/database/sql_server.svg" alt="Sql Server" loading="lazy">
-  <div class="card-name">Sql Server</div>
-</div>
-
-</div>
-
-            <div class="category-title">devops</div>
-<div class="grid">
-  <div class="card" data-name="docker" data-category="devops">
-  <img src="imagens/devops/docker.svg" alt="Docker" loading="lazy">
-  <div class="card-name">Docker</div>
-</div>
-<div class="card" data-name="github actions" data-category="devops">
-  <img src="imagens/devops/github_actions.svg" alt="Github Actions" loading="lazy">
-  <div class="card-name">Github Actions</div>
-</div>
-<div class="card" data-name="grafana" data-category="devops">
-  <img src="imagens/devops/grafana.svg" alt="Grafana" loading="lazy">
-  <div class="card-name">Grafana</div>
-</div>
-<div class="card" data-name="nginx" data-category="devops">
-  <img src="imagens/devops/nginx.svg" alt="Nginx" loading="lazy">
-  <div class="card-name">Nginx</div>
-</div>
-<div class="card" data-name="opentelemetry" data-category="devops">
-  <img src="imagens/devops/opentelemetry.svg" alt="Opentelemetry" loading="lazy">
-  <div class="card-name">Opentelemetry</div>
-</div>
-<div class="card" data-name="terraform" data-category="devops">
-  <img src="imagens/devops/terraform.svg" alt="Terraform" loading="lazy">
-  <div class="card-name">Terraform</div>
-</div>
-<div class="card" data-name="traefik" data-category="devops">
-  <img src="imagens/devops/traefik.svg" alt="Traefik" loading="lazy">
-  <div class="card-name">Traefik</div>
-</div>
-
-</div>
-
-            <div class="category-title">tools</div>
-<div class="grid">
-  <div class="card" data-name="apache airflow" data-category="tools">
-  <img src="imagens/tools/apache_airflow.svg" alt="Apache Airflow" loading="lazy">
-  <div class="card-name">Apache Airflow</div>
-</div>
-<div class="card" data-name="apache kafka" data-category="tools">
-  <img src="imagens/tools/apache_kafka.svg" alt="Apache Kafka" loading="lazy">
-  <div class="card-name">Apache Kafka</div>
-</div>
-<div class="card" data-name="apache zookeeper" data-category="tools">
-  <img src="imagens/tools/apache_zookeeper.svg" alt="Apache Zookeeper" loading="lazy">
-  <div class="card-name">Apache Zookeeper</div>
-</div>
-<div class="card" data-name="aws sdk" data-category="tools">
-  <img src="imagens/tools/aws_sdk.svg" alt="Aws Sdk" loading="lazy">
-  <div class="card-name">Aws Sdk</div>
-</div>
-<div class="card" data-name="aws sdk ruby" data-category="tools">
-  <img src="imagens/tools/aws_sdk_ruby.svg" alt="Aws Sdk Ruby" loading="lazy">
-  <div class="card-name">Aws Sdk Ruby</div>
-</div>
-<div class="card" data-name="blade" data-category="tools">
-  <img src="imagens/tools/blade.svg" alt="Blade" loading="lazy">
-  <div class="card-name">Blade</div>
-</div>
-<div class="card" data-name="boto3 aws sdk" data-category="tools">
-  <img src="imagens/tools/boto3_aws_sdk.svg" alt="Boto3 Aws Sdk" loading="lazy">
-  <div class="card-name">Boto3 Aws Sdk</div>
-</div>
-<div class="card" data-name="c" data-category="tools">
-  <img src="imagens/tools/c.svg" alt="C" loading="lazy">
-  <div class="card-name">C</div>
-</div>
-<div class="card" data-name="css" data-category="tools">
-  <img src="imagens/tools/css.svg" alt="Css" loading="lazy">
-  <div class="card-name">Css</div>
-</div>
-<div class="card" data-name="docker compose" data-category="tools">
-  <img src="imagens/tools/docker_compose.svg" alt="Docker Compose" loading="lazy">
-  <div class="card-name">Docker Compose</div>
-</div>
-<div class="card" data-name="express.js" data-category="tools">
-  <img src="imagens/tools/express.js.svg" alt="Express.js" loading="lazy">
-  <div class="card-name">Express.js</div>
-</div>
-<div class="card" data-name="fluentd" data-category="tools">
-  <img src="imagens/tools/fluentd.svg" alt="Fluentd" loading="lazy">
-  <div class="card-name">Fluentd</div>
-</div>
-<div class="card" data-name="go" data-category="tools">
-  <img src="imagens/tools/go.svg" alt="Go" loading="lazy">
-  <div class="card-name">Go</div>
-</div>
-<div class="card" data-name="go template" data-category="tools">
-  <img src="imagens/tools/go_template.svg" alt="Go Template" loading="lazy">
-  <div class="card-name">Go Template</div>
-</div>
-<div class="card" data-name="grafana loki" data-category="tools">
-  <img src="imagens/tools/grafana_loki.svg" alt="Grafana Loki" loading="lazy">
-  <div class="card-name">Grafana Loki</div>
-</div>
-<div class="card" data-name="grafana tempo" data-category="tools">
-  <img src="imagens/tools/grafana_tempo.svg" alt="Grafana Tempo" loading="lazy">
-  <div class="card-name">Grafana Tempo</div>
-</div>
-<div class="card" data-name="handlebars" data-category="tools">
-  <img src="imagens/tools/handlebars.svg" alt="Handlebars" loading="lazy">
-  <div class="card-name">Handlebars</div>
-</div>
-<div class="card" data-name="hcl" data-category="tools">
-  <img src="imagens/tools/hcl.svg" alt="Hcl" loading="lazy">
-  <div class="card-name">Hcl</div>
-</div>
-<div class="card" data-name="headless ui" data-category="tools">
-  <img src="imagens/tools/headless_ui.svg" alt="Headless Ui" loading="lazy">
-  <div class="card-name">Headless Ui</div>
-</div>
-<div class="card" data-name="html" data-category="tools">
-  <img src="imagens/tools/html.svg" alt="Html" loading="lazy">
-  <div class="card-name">Html</div>
-</div>
-<div class="card" data-name="java" data-category="tools">
-  <img src="imagens/tools/java.svg" alt="Java" loading="lazy">
-  <div class="card-name">Java</div>
-</div>
-<div class="card" data-name="javascript" data-category="tools">
-  <img src="imagens/tools/javascript.svg" alt="Javascript" loading="lazy">
-  <div class="card-name">Javascript</div>
-</div>
-<div class="card" data-name="jupyter" data-category="tools">
-  <img src="imagens/tools/jupyter.svg" alt="Jupyter" loading="lazy">
-  <div class="card-name">Jupyter</div>
-</div>
-<div class="card" data-name="jupyter notebook" data-category="tools">
-  <img src="imagens/tools/jupyter_notebook.svg" alt="Jupyter Notebook" loading="lazy">
-  <div class="card-name">Jupyter Notebook</div>
-</div>
-<div class="card" data-name="jwt" data-category="tools">
-  <img src="imagens/tools/jwt.svg" alt="Jwt" loading="lazy">
-  <div class="card-name">Jwt</div>
-</div>
-<div class="card" data-name="kafdrop" data-category="tools">
-  <img src="imagens/tools/kafdrop.svg" alt="Kafdrop" loading="lazy">
-  <div class="card-name">Kafdrop</div>
-</div>
-<div class="card" data-name="kafka ui" data-category="tools">
-  <img src="imagens/tools/kafka_ui.svg" alt="Kafka Ui" loading="lazy">
-  <div class="card-name">Kafka Ui</div>
-</div>
-<div class="card" data-name="keycloak" data-category="tools">
-  <img src="imagens/tools/keycloak.svg" alt="Keycloak" loading="lazy">
-  <div class="card-name">Keycloak</div>
-</div>
-<div class="card" data-name="kotlin" data-category="tools">
-  <img src="imagens/tools/kotlin.svg" alt="Kotlin" loading="lazy">
-  <div class="card-name">Kotlin</div>
-</div>
-<div class="card" data-name="laravel breeze" data-category="tools">
-  <img src="imagens/tools/laravel_breeze.svg" alt="Laravel Breeze" loading="lazy">
-  <div class="card-name">Laravel Breeze</div>
-</div>
-<div class="card" data-name="mailhog" data-category="tools">
-  <img src="imagens/tools/mailhog.svg" alt="Mailhog" loading="lazy">
-  <div class="card-name">Mailhog</div>
-</div>
-<div class="card" data-name="mailpit" data-category="tools">
-  <img src="imagens/tools/mailpit.svg" alt="Mailpit" loading="lazy">
-  <div class="card-name">Mailpit</div>
-</div>
-<div class="card" data-name="material ui" data-category="tools">
-  <img src="imagens/tools/material_ui.svg" alt="Material Ui" loading="lazy">
-  <div class="card-name">Material Ui</div>
-</div>
-<div class="card" data-name="node exporter" data-category="tools">
-  <img src="imagens/tools/node_exporter.svg" alt="Node Exporter" loading="lazy">
-  <div class="card-name">Node Exporter</div>
-</div>
-<div class="card" data-name="numpy" data-category="tools">
-  <img src="imagens/tools/numpy.svg" alt="Numpy" loading="lazy">
-  <div class="card-name">Numpy</div>
-</div>
-<div class="card" data-name="pandas" data-category="tools">
-  <img src="imagens/tools/pandas.svg" alt="Pandas" loading="lazy">
-  <div class="card-name">Pandas</div>
-</div>
-<div class="card" data-name="passport.js" data-category="tools">
-  <img src="imagens/tools/passport.js.svg" alt="Passport.js" loading="lazy">
-  <div class="card-name">Passport.js</div>
-</div>
-<div class="card" data-name="phobos kafka" data-category="tools">
-  <img src="imagens/tools/phobos_kafka.svg" alt="Phobos Kafka" loading="lazy">
-  <div class="card-name">Phobos Kafka</div>
-</div>
-<div class="card" data-name="php" data-category="tools">
-  <img src="imagens/tools/php.svg" alt="Php" loading="lazy">
-  <div class="card-name">Php</div>
-</div>
-<div class="card" data-name="phpunit" data-category="tools">
-  <img src="imagens/tools/phpunit.svg" alt="Phpunit" loading="lazy">
-  <div class="card-name">Phpunit</div>
-</div>
-<div class="card" data-name="powershell" data-category="tools">
-  <img src="imagens/tools/powershell.svg" alt="Powershell" loading="lazy">
-  <div class="card-name">Powershell</div>
-</div>
-<div class="card" data-name="promtail" data-category="tools">
-  <img src="imagens/tools/promtail.svg" alt="Promtail" loading="lazy">
-  <div class="card-name">Promtail</div>
-</div>
-<div class="card" data-name="pytest" data-category="tools">
-  <img src="imagens/tools/pytest.svg" alt="Pytest" loading="lazy">
-  <div class="card-name">Pytest</div>
-</div>
-<div class="card" data-name="python" data-category="tools">
-  <img src="imagens/tools/python.svg" alt="Python" loading="lazy">
-  <div class="card-name">Python</div>
-</div>
-<div class="card" data-name="pytorch" data-category="tools">
-  <img src="imagens/tools/pytorch.svg" alt="Pytorch" loading="lazy">
-  <div class="card-name">Pytorch</div>
-</div>
-<div class="card" data-name="r" data-category="tools">
-  <img src="imagens/tools/r.svg" alt="R" loading="lazy">
-  <div class="card-name">R</div>
-</div>
-<div class="card" data-name="radix ui" data-category="tools">
-  <img src="imagens/tools/radix_ui.svg" alt="Radix Ui" loading="lazy">
-  <div class="card-name">Radix Ui</div>
-</div>
-<div class="card" data-name="rq redis queue" data-category="tools">
-  <img src="imagens/tools/rq_redis_queue.svg" alt="Rq Redis Queue" loading="lazy">
-  <div class="card-name">Rq Redis Queue</div>
-</div>
-<div class="card" data-name="ruby" data-category="tools">
-  <img src="imagens/tools/ruby.svg" alt="Ruby" loading="lazy">
-  <div class="card-name">Ruby</div>
-</div>
-<div class="card" data-name="sass-scss" data-category="tools">
-  <img src="imagens/tools/sass-scss.svg" alt="Sass-scss" loading="lazy">
-  <div class="card-name">Sass-scss</div>
-</div>
-<div class="card" data-name="scikit-learn" data-category="tools">
-  <img src="imagens/tools/scikit-learn.svg" alt="Scikit-learn" loading="lazy">
-  <div class="card-name">Scikit-learn</div>
-</div>
-<div class="card" data-name="scss" data-category="tools">
-  <img src="imagens/tools/scss.svg" alt="Scss" loading="lazy">
-  <div class="card-name">Scss</div>
-</div>
-<div class="card" data-name="serverless framework" data-category="tools">
-  <img src="imagens/tools/serverless_framework.svg" alt="Serverless Framework" loading="lazy">
-  <div class="card-name">Serverless Framework</div>
-</div>
-<div class="card" data-name="shadcn-ui" data-category="tools">
-  <img src="imagens/tools/shadcn-ui.svg" alt="Shadcn-ui" loading="lazy">
-  <div class="card-name">Shadcn-ui</div>
-</div>
-<div class="card" data-name="shell" data-category="tools">
-  <img src="imagens/tools/shell.svg" alt="Shell" loading="lazy">
-  <div class="card-name">Shell</div>
-</div>
-<div class="card" data-name="swift" data-category="tools">
-  <img src="imagens/tools/swift.svg" alt="Swift" loading="lazy">
-  <div class="card-name">Swift</div>
-</div>
-<div class="card" data-name="typescript" data-category="tools">
-  <img src="imagens/tools/typescript.svg" alt="Typescript" loading="lazy">
-  <div class="card-name">Typescript</div>
-</div>
-
-</div>
-
-            <div class="category-title">geo</div>
-<div class="grid">
-  <div class="card" data-name="gdal" data-category="geo">
-  <img src="imagens/geo/gdal.svg" alt="Gdal" loading="lazy">
-  <div class="card-name">Gdal</div>
-</div>
-<div class="card" data-name="geopandas" data-category="geo">
-  <img src="imagens/geo/geopandas.svg" alt="Geopandas" loading="lazy">
-  <div class="card-name">Geopandas</div>
-</div>
-<div class="card" data-name="geoserver" data-category="geo">
-  <img src="imagens/geo/geoserver.png" alt="Geoserver" loading="lazy">
-  <div class="card-name">Geoserver</div>
-</div>
-<div class="card" data-name="mapbox" data-category="geo">
-  <img src="imagens/geo/mapbox.svg" alt="Mapbox" loading="lazy">
-  <div class="card-name">Mapbox</div>
-</div>
-<div class="card" data-name="postgis" data-category="geo">
-  <img src="imagens/geo/postgis.svg" alt="Postgis" loading="lazy">
-  <div class="card-name">Postgis</div>
-</div>
-<div class="card" data-name="qgis" data-category="geo">
-  <img src="imagens/geo/qgis.svg" alt="Qgis" loading="lazy">
-  <div class="card-name">Qgis</div>
-</div>
-<div class="card" data-name="rasterio" data-category="geo">
-  <img src="imagens/geo/rasterio.svg" alt="Rasterio" loading="lazy">
-  <div class="card-name">Rasterio</div>
-</div>
-<div class="card" data-name="shapely" data-category="geo">
-  <img src="imagens/geo/shapely.svg" alt="Shapely" loading="lazy">
-  <div class="card-name">Shapely</div>
-</div>
-
-</div>
-
-    </div>
-    
-    <div id="languages-section" class="category-section">
-  <div class="category-title">linguagens de programação</div>
-  <div class="grid">
-    <div class="card" data-name="c">
-  <img src="imagens/languages/c.svg" alt="C" loading="lazy">
-  <div class="card-name">C</div>
-</div>
-<div class="card" data-name="css">
-  <img src="imagens/languages/css.svg" alt="Css" loading="lazy">
-  <div class="card-name">Css</div>
-</div>
-<div class="card" data-name="go">
-  <img src="imagens/languages/go.svg" alt="Go" loading="lazy">
-  <div class="card-name">Go</div>
-</div>
-<div class="card" data-name="groovy">
-  <img src="imagens/languages/groovy.svg" alt="Groovy" loading="lazy">
-  <div class="card-name">Groovy</div>
-</div>
-<div class="card" data-name="html">
-  <img src="imagens/languages/html.svg" alt="Html" loading="lazy">
-  <div class="card-name">Html</div>
-</div>
-<div class="card" data-name="java">
-  <img src="imagens/languages/java.svg" alt="Java" loading="lazy">
-  <div class="card-name">Java</div>
-</div>
-<div class="card" data-name="javascript">
-  <img src="imagens/languages/javascript.svg" alt="Javascript" loading="lazy">
-  <div class="card-name">Javascript</div>
-</div>
-<div class="card" data-name="jupyter notebook">
-  <img src="imagens/languages/jupyter_notebook.svg" alt="Jupyter Notebook" loading="lazy">
-  <div class="card-name">Jupyter Notebook</div>
-</div>
-<div class="card" data-name="kotlin">
-  <img src="imagens/languages/kotlin.svg" alt="Kotlin" loading="lazy">
-  <div class="card-name">Kotlin</div>
-</div>
-<div class="card" data-name="lua">
-  <img src="imagens/languages/lua.svg" alt="Lua" loading="lazy">
-  <div class="card-name">Lua</div>
-</div>
-<div class="card" data-name="objective-c">
-  <img src="imagens/languages/objective-c.svg" alt="Objective-c" loading="lazy">
-  <div class="card-name">Objective-c</div>
+    <div class="content">
+      <div id="all-section" class="category-section active">
+        <div class="category-title">Todas as Tecnologias</div>
+        <div class="grid">
+<div class="card" data-name="c#">
+  <img src="imagens/languages/c.svg" alt="C#" loading="lazy">
+  <div class="card-name">C#</div>
 </div>
 <div class="card" data-name="php">
-  <img src="imagens/languages/php.svg" alt="Php" loading="lazy">
-  <div class="card-name">Php</div>
-</div>
-<div class="card" data-name="powershell">
-  <img src="imagens/languages/powershell.svg" alt="Powershell" loading="lazy">
-  <div class="card-name">Powershell</div>
+  <img src="imagens/languages/php.svg" alt="PHP" loading="lazy">
+  <div class="card-name">PHP</div>
 </div>
 <div class="card" data-name="python">
   <img src="imagens/languages/python.svg" alt="Python" loading="lazy">
   <div class="card-name">Python</div>
 </div>
-<div class="card" data-name="r">
-  <img src="imagens/languages/r.svg" alt="R" loading="lazy">
-  <div class="card-name">R</div>
-</div>
 <div class="card" data-name="ruby">
   <img src="imagens/languages/ruby.svg" alt="Ruby" loading="lazy">
   <div class="card-name">Ruby</div>
 </div>
-<div class="card" data-name="shell">
-  <img src="imagens/languages/shell.svg" alt="Shell" loading="lazy">
-  <div class="card-name">Shell</div>
-</div>
-<div class="card" data-name="swift">
-  <img src="imagens/languages/swift.svg" alt="Swift" loading="lazy">
-  <div class="card-name">Swift</div>
-</div>
 <div class="card" data-name="typescript">
-  <img src="imagens/languages/typescript.svg" alt="Typescript" loading="lazy">
-  <div class="card-name">Typescript</div>
+  <img src="imagens/languages/typescript.svg" alt="TypeScript" loading="lazy">
+  <div class="card-name">TypeScript</div>
 </div>
-
-  </div>
-</div>
-
-          <div id="ai-section" class="category-section">
-  <div class="category-title">ai</div>
-  <div class="grid">
-    <div class="card" data-name="anthropic">
+<div class="card" data-name="anthropic">
   <img src="imagens/ai/anthropic.svg" alt="Anthropic" loading="lazy">
   <div class="card-name">Anthropic</div>
 </div>
 <div class="card" data-name="chatgpt">
-  <img src="imagens/ai/chatgpt.svg" alt="Chatgpt" loading="lazy">
-  <div class="card-name">Chatgpt</div>
+  <img src="imagens/ai/chatgpt.svg" alt="ChatGPT" loading="lazy">
+  <div class="card-name">ChatGPT</div>
 </div>
 <div class="card" data-name="claude haiku 4.5">
-  <img src="imagens/ai/claude_haiku_4.5.svg" alt="Claude Haiku 4.5" loading="lazy">
+  <img src="imagens/ai/claude_haiku_4_5.svg" alt="Claude Haiku 4.5" loading="lazy">
   <div class="card-name">Claude Haiku 4.5</div>
 </div>
 <div class="card" data-name="claude opus 4.5">
-  <img src="imagens/ai/claude_opus_4.5.svg" alt="Claude Opus 4.5" loading="lazy">
+  <img src="imagens/ai/claude_opus_4_5.svg" alt="Claude Opus 4.5" loading="lazy">
   <div class="card-name">Claude Opus 4.5</div>
 </div>
 <div class="card" data-name="claude sonnet 4">
@@ -984,11 +215,11 @@
   <div class="card-name">Claude Sonnet 4</div>
 </div>
 <div class="card" data-name="claude sonnet 4.5">
-  <img src="imagens/ai/claude_sonnet_4.5.svg" alt="Claude Sonnet 4.5" loading="lazy">
+  <img src="imagens/ai/claude_sonnet_4_5.svg" alt="Claude Sonnet 4.5" loading="lazy">
   <div class="card-name">Claude Sonnet 4.5</div>
 </div>
 <div class="card" data-name="gemini 2.5 pro">
-  <img src="imagens/ai/gemini_2.5_pro.svg" alt="Gemini 2.5 Pro" loading="lazy">
+  <img src="imagens/ai/gemini_2_5_pro.svg" alt="Gemini 2.5 Pro" loading="lazy">
   <div class="card-name">Gemini 2.5 Pro</div>
 </div>
 <div class="card" data-name="gemini 3 flash">
@@ -996,29 +227,34 @@
   <div class="card-name">Gemini 3 Flash</div>
 </div>
 <div class="card" data-name="google ai">
-  <img src="imagens/ai/google_ai.svg" alt="Google Ai" loading="lazy">
-  <div class="card-name">Google Ai</div>
+  <img src="imagens/ai/google_ai.svg" alt="Google AI" loading="lazy">
+  <div class="card-name">Google AI</div>
+</div>
+<div class="card" data-name="gpt-4">
+  <img src="imagens/ai/gpt_4.svg" alt="GPT-4" loading="lazy">
+  <div class="card-name">GPT-4</div>
+</div>
+<div class="card" data-name="gpt-4.1">
+  <img src="imagens/ai/gpt_4_1.svg" alt="GPT-4.1" loading="lazy">
+  <div class="card-name">GPT-4.1</div>
+</div>
+<div class="card" data-name="gpt-4o">
+  <img src="imagens/ai/gpt_4o.svg" alt="GPT-4o" loading="lazy">
+  <div class="card-name">GPT-4o</div>
 </div>
 <div class="card" data-name="openai">
-  <img src="imagens/ai/openai.svg" alt="Openai" loading="lazy">
-  <div class="card-name">Openai</div>
+  <img src="imagens/ai/openai.svg" alt="OpenAI" loading="lazy">
+  <div class="card-name">OpenAI</div>
 </div>
 <div class="card" data-name="pytorch">
-  <img src="imagens/ai/pytorch.svg" alt="Pytorch" loading="lazy">
-  <div class="card-name">Pytorch</div>
+  <img src="imagens/ai/pytorch.svg" alt="PyTorch" loading="lazy">
+  <div class="card-name">PyTorch</div>
 </div>
 <div class="card" data-name="scikit-learn">
-  <img src="imagens/ai/scikit-learn.svg" alt="Scikit-learn" loading="lazy">
+  <img src="imagens/ai/scikit_learn.svg" alt="Scikit-learn" loading="lazy">
   <div class="card-name">Scikit-learn</div>
 </div>
-
-  </div>
-</div>
-
-          <div id="frontend-section" class="category-section">
-  <div class="category-title">frontend</div>
-  <div class="grid">
-    <div class="card" data-name="angular">
+<div class="card" data-name="angular">
   <img src="imagens/frontend/angular.svg" alt="Angular" loading="lazy">
   <div class="card-name">Angular</div>
 </div>
@@ -1027,7 +263,7 @@
   <div class="card-name">Expo</div>
 </div>
 <div class="card" data-name="next.js">
-  <img src="imagens/frontend/next.js.svg" alt="Next.js" loading="lazy">
+  <img src="imagens/frontend/next_js.svg" alt="Next.js" loading="lazy">
   <div class="card-name">Next.js</div>
 </div>
 <div class="card" data-name="react">
@@ -1039,20 +275,12 @@
   <div class="card-name">React Native</div>
 </div>
 <div class="card" data-name="vue.js">
-  <img src="imagens/frontend/vue.js.svg" alt="Vue.js" loading="lazy">
+  <img src="imagens/frontend/vue_js.svg" alt="Vue.js" loading="lazy">
   <div class="card-name">Vue.js</div>
 </div>
-
-  </div>
-</div>
-</div>
-
-          <div id="backend-section" class="category-section">
-  <div class="category-title">backend</div>
-  <div class="grid">
-    <div class="card" data-name="fastapi">
-  <img src="imagens/backend/fastapi.svg" alt="Fastapi" loading="lazy">
-  <div class="card-name">Fastapi</div>
+<div class="card" data-name="fastapi">
+  <img src="imagens/backend/fastapi.svg" alt="FastAPI" loading="lazy">
+  <div class="card-name">FastAPI</div>
 </div>
 <div class="card" data-name="flask">
   <img src="imagens/backend/flask.svg" alt="Flask" loading="lazy">
@@ -1063,502 +291,256 @@
   <div class="card-name">Laravel</div>
 </div>
 <div class="card" data-name="nestjs">
-  <img src="imagens/backend/nestjs.svg" alt="Nestjs" loading="lazy">
-  <div class="card-name">Nestjs</div>
+  <img src="imagens/backend/nestjs.svg" alt="NestJS" loading="lazy">
+  <div class="card-name">NestJS</div>
 </div>
 <div class="card" data-name="ruby on rails">
-  <img src="imagens/backend/ruby_on_rails.svg" alt="Ruby On Rails" loading="lazy">
-  <div class="card-name">Ruby On Rails</div>
-</div>
-
-  </div>
-</div>
-</div>
-
-          <div id="database-section" class="category-section">
-  <div class="category-title">database</div>
-  <div class="grid">
-    <div class="card" data-name="firebase">
-  <img src="imagens/database/firebase.svg" alt="Firebase" loading="lazy">
-  <div class="card-name">Firebase</div>
-</div>
-<div class="card" data-name="influxdb">
-  <img src="imagens/database/influxdb.svg" alt="Influxdb" loading="lazy">
-  <div class="card-name">Influxdb</div>
-</div>
-<div class="card" data-name="minio">
-  <img src="imagens/database/minio.svg" alt="Minio" loading="lazy">
-  <div class="card-name">Minio</div>
+  <img src="imagens/backend/ruby_on_rails.svg" alt="Ruby on Rails" loading="lazy">
+  <div class="card-name">Ruby on Rails</div>
 </div>
 <div class="card" data-name="mongodb">
-  <img src="imagens/database/mongodb.svg" alt="Mongodb" loading="lazy">
-  <div class="card-name">Mongodb</div>
+  <img src="imagens/database/mongodb.svg" alt="MongoDB" loading="lazy">
+  <div class="card-name">MongoDB</div>
 </div>
 <div class="card" data-name="mysql">
-  <img src="imagens/database/mysql.svg" alt="Mysql" loading="lazy">
-  <div class="card-name">Mysql</div>
+  <img src="imagens/database/mysql.svg" alt="MySQL" loading="lazy">
+  <div class="card-name">MySQL</div>
 </div>
 <div class="card" data-name="postgresql">
-  <img src="imagens/database/postgresql.svg" alt="Postgresql" loading="lazy">
-  <div class="card-name">Postgresql</div>
-</div>
-<div class="card" data-name="prometheus">
-  <img src="imagens/database/prometheus.svg" alt="Prometheus" loading="lazy">
-  <div class="card-name">Prometheus</div>
+  <img src="imagens/database/postgresql.svg" alt="PostgreSQL" loading="lazy">
+  <div class="card-name">PostgreSQL</div>
 </div>
 <div class="card" data-name="redis">
   <img src="imagens/database/redis.svg" alt="Redis" loading="lazy">
   <div class="card-name">Redis</div>
 </div>
-<div class="card" data-name="sql server">
-  <img src="imagens/database/sql_server.svg" alt="Sql Server" loading="lazy">
-  <div class="card-name">Sql Server</div>
-</div>
-
-  </div>
-</div>
-
-          <div id="devops-section" class="category-section">
-  <div class="category-title">devops</div>
-  <div class="grid">
-    <div class="card" data-name="docker">
+<div class="card" data-name="docker">
   <img src="imagens/devops/docker.svg" alt="Docker" loading="lazy">
   <div class="card-name">Docker</div>
 </div>
 <div class="card" data-name="github actions">
-  <img src="imagens/devops/github_actions.svg" alt="Github Actions" loading="lazy">
-  <div class="card-name">Github Actions</div>
+  <img src="imagens/devops/github_actions.svg" alt="GitHub Actions" loading="lazy">
+  <div class="card-name">GitHub Actions</div>
 </div>
 <div class="card" data-name="grafana">
   <img src="imagens/devops/grafana.svg" alt="Grafana" loading="lazy">
   <div class="card-name">Grafana</div>
 </div>
-<div class="card" data-name="nginx">
-  <img src="imagens/devops/nginx.svg" alt="Nginx" loading="lazy">
-  <div class="card-name">Nginx</div>
-</div>
-<div class="card" data-name="opentelemetry">
-  <img src="imagens/devops/opentelemetry.svg" alt="Opentelemetry" loading="lazy">
-  <div class="card-name">Opentelemetry</div>
+<div class="card" data-name="prometheus">
+  <img src="imagens/devops/prometheus.svg" alt="Prometheus" loading="lazy">
+  <div class="card-name">Prometheus</div>
 </div>
 <div class="card" data-name="terraform">
   <img src="imagens/devops/terraform.svg" alt="Terraform" loading="lazy">
   <div class="card-name">Terraform</div>
 </div>
-<div class="card" data-name="traefik">
-  <img src="imagens/devops/traefik.svg" alt="Traefik" loading="lazy">
-  <div class="card-name">Traefik</div>
+<div class="card" data-name="ant design">
+  <img src="imagens/tools/ant_design.svg" alt="Ant Design" loading="lazy">
+  <div class="card-name">Ant Design</div>
 </div>
-
-  </div>
+<div class="card" data-name="bootstrap">
+  <img src="imagens/tools/bootstrap.svg" alt="Bootstrap" loading="lazy">
+  <div class="card-name">Bootstrap</div>
 </div>
-
-          <div id="tools-section" class="category-section">
-  <div class="category-title">tools</div>
-  <div class="grid">
-    <div class="card" data-name="apache airflow">
-  <img src="imagens/tools/apache_airflow.svg" alt="Apache Airflow" loading="lazy">
-  <div class="card-name">Apache Airflow</div>
+<div class="card" data-name="celery">
+  <img src="imagens/tools/celery.svg" alt="Celery" loading="lazy">
+  <div class="card-name">Celery</div>
 </div>
-<div class="card" data-name="apache kafka">
-  <img src="imagens/tools/apache_kafka.svg" alt="Apache Kafka" loading="lazy">
-  <div class="card-name">Apache Kafka</div>
+<div class="card" data-name="class-validator">
+  <img src="imagens/tools/class_validator.svg" alt="class-validator" loading="lazy">
+  <div class="card-name">class-validator</div>
 </div>
-<div class="card" data-name="apache zookeeper">
-  <img src="imagens/tools/apache_zookeeper.svg" alt="Apache Zookeeper" loading="lazy">
-  <div class="card-name">Apache Zookeeper</div>
+<div class="card" data-name="cypress">
+  <img src="imagens/tools/cypress.svg" alt="Cypress" loading="lazy">
+  <div class="card-name">Cypress</div>
 </div>
-<div class="card" data-name="aws sdk">
-  <img src="imagens/tools/aws_sdk.svg" alt="Aws Sdk" loading="lazy">
-  <div class="card-name">Aws Sdk</div>
-</div>
-<div class="card" data-name="aws sdk ruby">
-  <img src="imagens/tools/aws_sdk_ruby.svg" alt="Aws Sdk Ruby" loading="lazy">
-  <div class="card-name">Aws Sdk Ruby</div>
-</div>
-<div class="card" data-name="blade">
-  <img src="imagens/tools/blade.svg" alt="Blade" loading="lazy">
-  <div class="card-name">Blade</div>
-</div>
-<div class="card" data-name="boto3 aws sdk">
-  <img src="imagens/tools/boto3_aws_sdk.svg" alt="Boto3 Aws Sdk" loading="lazy">
-  <div class="card-name">Boto3 Aws Sdk</div>
-</div>
-<div class="card" data-name="c">
-  <img src="imagens/tools/c.svg" alt="C" loading="lazy">
-  <div class="card-name">C</div>
-</div>
-<div class="card" data-name="css">
-  <img src="imagens/tools/css.svg" alt="Css" loading="lazy">
-  <div class="card-name">Css</div>
+<div class="card" data-name="devise">
+  <img src="imagens/tools/devise.svg" alt="Devise" loading="lazy">
+  <div class="card-name">Devise</div>
 </div>
 <div class="card" data-name="docker compose">
   <img src="imagens/tools/docker_compose.svg" alt="Docker Compose" loading="lazy">
   <div class="card-name">Docker Compose</div>
 </div>
+<div class="card" data-name="esbuild">
+  <img src="imagens/tools/esbuild.svg" alt="esbuild" loading="lazy">
+  <div class="card-name">esbuild</div>
+</div>
 <div class="card" data-name="express.js">
-  <img src="imagens/tools/express.js.svg" alt="Express.js" loading="lazy">
+  <img src="imagens/tools/express_js.svg" alt="Express.js" loading="lazy">
   <div class="card-name">Express.js</div>
 </div>
-<div class="card" data-name="fluentd">
-  <img src="imagens/tools/fluentd.svg" alt="Fluentd" loading="lazy">
-  <div class="card-name">Fluentd</div>
+<div class="card" data-name="factory bot">
+  <img src="imagens/tools/factory_bot.svg" alt="Factory Bot" loading="lazy">
+  <div class="card-name">Factory Bot</div>
 </div>
-<div class="card" data-name="go">
-  <img src="imagens/tools/go.svg" alt="Go" loading="lazy">
-  <div class="card-name">Go</div>
+<div class="card" data-name="inertia.js">
+  <img src="imagens/tools/inertia_js.svg" alt="Inertia.js" loading="lazy">
+  <div class="card-name">Inertia.js</div>
 </div>
-<div class="card" data-name="go template">
-  <img src="imagens/tools/go_template.svg" alt="Go Template" loading="lazy">
-  <div class="card-name">Go Template</div>
+<div class="card" data-name="jest">
+  <img src="imagens/tools/jest.svg" alt="Jest" loading="lazy">
+  <div class="card-name">Jest</div>
 </div>
-<div class="card" data-name="grafana loki">
-  <img src="imagens/tools/grafana_loki.svg" alt="Grafana Loki" loading="lazy">
-  <div class="card-name">Grafana Loki</div>
-</div>
-<div class="card" data-name="grafana tempo">
-  <img src="imagens/tools/grafana_tempo.svg" alt="Grafana Tempo" loading="lazy">
-  <div class="card-name">Grafana Tempo</div>
-</div>
-<div class="card" data-name="handlebars">
-  <img src="imagens/tools/handlebars.svg" alt="Handlebars" loading="lazy">
-  <div class="card-name">Handlebars</div>
-</div>
-<div class="card" data-name="hcl">
-  <img src="imagens/tools/hcl.svg" alt="Hcl" loading="lazy">
-  <div class="card-name">Hcl</div>
-</div>
-<div class="card" data-name="headless ui">
-  <img src="imagens/tools/headless_ui.svg" alt="Headless Ui" loading="lazy">
-  <div class="card-name">Headless Ui</div>
-</div>
-<div class="card" data-name="html">
-  <img src="imagens/tools/html.svg" alt="Html" loading="lazy">
-  <div class="card-name">Html</div>
-</div>
-<div class="card" data-name="java">
-  <img src="imagens/tools/java.svg" alt="Java" loading="lazy">
-  <div class="card-name">Java</div>
-</div>
-<div class="card" data-name="javascript">
-  <img src="imagens/tools/javascript.svg" alt="Javascript" loading="lazy">
-  <div class="card-name">Javascript</div>
-</div>
-<div class="card" data-name="jupyter">
-  <img src="imagens/tools/jupyter.svg" alt="Jupyter" loading="lazy">
-  <div class="card-name">Jupyter</div>
-</div>
-<div class="card" data-name="jupyter notebook">
-  <img src="imagens/tools/jupyter_notebook.svg" alt="Jupyter Notebook" loading="lazy">
-  <div class="card-name">Jupyter Notebook</div>
-</div>
-<div class="card" data-name="jwt">
-  <img src="imagens/tools/jwt.svg" alt="Jwt" loading="lazy">
-  <div class="card-name">Jwt</div>
-</div>
-<div class="card" data-name="kafdrop">
-  <img src="imagens/tools/kafdrop.svg" alt="Kafdrop" loading="lazy">
-  <div class="card-name">Kafdrop</div>
-</div>
-<div class="card" data-name="kafka ui">
-  <img src="imagens/tools/kafka_ui.svg" alt="Kafka Ui" loading="lazy">
-  <div class="card-name">Kafka Ui</div>
-</div>
-<div class="card" data-name="keycloak">
-  <img src="imagens/tools/keycloak.svg" alt="Keycloak" loading="lazy">
-  <div class="card-name">Keycloak</div>
-</div>
-<div class="card" data-name="kotlin">
-  <img src="imagens/tools/kotlin.svg" alt="Kotlin" loading="lazy">
-  <div class="card-name">Kotlin</div>
+<div class="card" data-name="kafka">
+  <img src="imagens/tools/kafka.svg" alt="Kafka" loading="lazy">
+  <div class="card-name">Kafka</div>
 </div>
 <div class="card" data-name="laravel breeze">
   <img src="imagens/tools/laravel_breeze.svg" alt="Laravel Breeze" loading="lazy">
   <div class="card-name">Laravel Breeze</div>
 </div>
-<div class="card" data-name="mailhog">
-  <img src="imagens/tools/mailhog.svg" alt="Mailhog" loading="lazy">
-  <div class="card-name">Mailhog</div>
+<div class="card" data-name="laravel nova">
+  <img src="imagens/tools/laravel_nova.svg" alt="Laravel Nova" loading="lazy">
+  <div class="card-name">Laravel Nova</div>
 </div>
-<div class="card" data-name="mailpit">
-  <img src="imagens/tools/mailpit.svg" alt="Mailpit" loading="lazy">
-  <div class="card-name">Mailpit</div>
+<div class="card" data-name="laravel sanctum">
+  <img src="imagens/tools/laravel_sanctum.svg" alt="Laravel Sanctum" loading="lazy">
+  <div class="card-name">Laravel Sanctum</div>
 </div>
 <div class="card" data-name="material ui">
-  <img src="imagens/tools/material_ui.svg" alt="Material Ui" loading="lazy">
-  <div class="card-name">Material Ui</div>
+  <img src="imagens/tools/material_ui.svg" alt="Material UI" loading="lazy">
+  <div class="card-name">Material UI</div>
 </div>
-<div class="card" data-name="node exporter">
-  <img src="imagens/tools/node_exporter.svg" alt="Node Exporter" loading="lazy">
-  <div class="card-name">Node Exporter</div>
+<div class="card" data-name="mockery">
+  <img src="imagens/tools/mockery.svg" alt="Mockery" loading="lazy">
+  <div class="card-name">Mockery</div>
+</div>
+<div class="card" data-name="mongoose">
+  <img src="imagens/tools/mongoose.svg" alt="Mongoose" loading="lazy">
+  <div class="card-name">Mongoose</div>
+</div>
+<div class="card" data-name="node.js">
+  <img src="imagens/tools/node_js.svg" alt="Node.js" loading="lazy">
+  <div class="card-name">Node.js</div>
 </div>
 <div class="card" data-name="numpy">
-  <img src="imagens/tools/numpy.svg" alt="Numpy" loading="lazy">
-  <div class="card-name">Numpy</div>
+  <img src="imagens/tools/numpy.svg" alt="NumPy" loading="lazy">
+  <div class="card-name">NumPy</div>
 </div>
 <div class="card" data-name="pandas">
   <img src="imagens/tools/pandas.svg" alt="Pandas" loading="lazy">
   <div class="card-name">Pandas</div>
 </div>
 <div class="card" data-name="passport.js">
-  <img src="imagens/tools/passport.js.svg" alt="Passport.js" loading="lazy">
+  <img src="imagens/tools/passport_js.svg" alt="Passport.js" loading="lazy">
   <div class="card-name">Passport.js</div>
 </div>
-<div class="card" data-name="phobos kafka">
-  <img src="imagens/tools/phobos_kafka.svg" alt="Phobos Kafka" loading="lazy">
-  <div class="card-name">Phobos Kafka</div>
-</div>
-<div class="card" data-name="php">
-  <img src="imagens/tools/php.svg" alt="Php" loading="lazy">
-  <div class="card-name">Php</div>
-</div>
 <div class="card" data-name="phpunit">
-  <img src="imagens/tools/phpunit.svg" alt="Phpunit" loading="lazy">
-  <div class="card-name">Phpunit</div>
-</div>
-<div class="card" data-name="powershell">
-  <img src="imagens/tools/powershell.svg" alt="Powershell" loading="lazy">
-  <div class="card-name">Powershell</div>
-</div>
-<div class="card" data-name="promtail">
-  <img src="imagens/tools/promtail.svg" alt="Promtail" loading="lazy">
-  <div class="card-name">Promtail</div>
-</div>
-<div class="card" data-name="pytest">
-  <img src="imagens/tools/pytest.svg" alt="Pytest" loading="lazy">
-  <div class="card-name">Pytest</div>
-</div>
-<div class="card" data-name="python">
-  <img src="imagens/tools/python.svg" alt="Python" loading="lazy">
-  <div class="card-name">Python</div>
-</div>
-<div class="card" data-name="pytorch">
-  <img src="imagens/tools/pytorch.svg" alt="Pytorch" loading="lazy">
-  <div class="card-name">Pytorch</div>
-</div>
-<div class="card" data-name="r">
-  <img src="imagens/tools/r.svg" alt="R" loading="lazy">
-  <div class="card-name">R</div>
-</div>
-<div class="card" data-name="radix ui">
-  <img src="imagens/tools/radix_ui.svg" alt="Radix Ui" loading="lazy">
-  <div class="card-name">Radix Ui</div>
-</div>
-<div class="card" data-name="rq redis queue">
-  <img src="imagens/tools/rq_redis_queue.svg" alt="Rq Redis Queue" loading="lazy">
-  <div class="card-name">Rq Redis Queue</div>
-</div>
-<div class="card" data-name="ruby">
-  <img src="imagens/tools/ruby.svg" alt="Ruby" loading="lazy">
-  <div class="card-name">Ruby</div>
-</div>
-<div class="card" data-name="sass-scss">
-  <img src="imagens/tools/sass-scss.svg" alt="Sass-scss" loading="lazy">
-  <div class="card-name">Sass-scss</div>
-</div>
-<div class="card" data-name="scikit-learn">
-  <img src="imagens/tools/scikit-learn.svg" alt="Scikit-learn" loading="lazy">
-  <div class="card-name">Scikit-learn</div>
-</div>
-<div class="card" data-name="scss">
-  <img src="imagens/tools/scss.svg" alt="Scss" loading="lazy">
-  <div class="card-name">Scss</div>
-</div>
-<div class="card" data-name="serverless framework">
-  <img src="imagens/tools/serverless_framework.svg" alt="Serverless Framework" loading="lazy">
-  <div class="card-name">Serverless Framework</div>
-</div>
-<div class="card" data-name="shadcn-ui">
-  <img src="imagens/tools/shadcn-ui.svg" alt="Shadcn-ui" loading="lazy">
-  <div class="card-name">Shadcn-ui</div>
-</div>
-<div class="card" data-name="shell">
-  <img src="imagens/tools/shell.svg" alt="Shell" loading="lazy">
-  <div class="card-name">Shell</div>
-</div>
-<div class="card" data-name="swift">
-  <img src="imagens/tools/swift.svg" alt="Swift" loading="lazy">
-  <div class="card-name">Swift</div>
-</div>
-<div class="card" data-name="typescript">
-  <img src="imagens/tools/typescript.svg" alt="Typescript" loading="lazy">
-  <div class="card-name">Typescript</div>
-</div>
-<div class="card" data-name="ant design">
-  <img src="imagens/frontend/ant_design.svg" alt="Ant Design" loading="lazy">
-  <div class="card-name">Ant Design</div>
-</div>
-<div class="card" data-name="bootstrap">
-  <img src="imagens/frontend/bootstrap.svg" alt="Bootstrap" loading="lazy">
-  <div class="card-name">Bootstrap</div>
-</div>
-<div class="card" data-name="cypress">
-  <img src="imagens/frontend/cypress.svg" alt="Cypress" loading="lazy">
-  <div class="card-name">Cypress</div>
-</div>
-<div class="card" data-name="esbuild">
-  <img src="imagens/frontend/esbuild.svg" alt="Esbuild" loading="lazy">
-  <div class="card-name">Esbuild</div>
-</div>
-<div class="card" data-name="inertia.js">
-  <img src="imagens/frontend/inertia.js.svg" alt="Inertia.js" loading="lazy">
-  <div class="card-name">Inertia.js</div>
-</div>
-<div class="card" data-name="jest">
-  <img src="imagens/frontend/jest.svg" alt="Jest" loading="lazy">
-  <div class="card-name">Jest</div>
+  <img src="imagens/tools/phpunit.svg" alt="PHPUnit" loading="lazy">
+  <div class="card-name">PHPUnit</div>
 </div>
 <div class="card" data-name="postcss">
-  <img src="imagens/frontend/postcss.svg" alt="Postcss" loading="lazy">
-  <div class="card-name">Postcss</div>
-</div>
-<div class="card" data-name="redux">
-  <img src="imagens/frontend/redux.svg" alt="Redux" loading="lazy">
-  <div class="card-name">Redux</div>
-</div>
-<div class="card" data-name="storybook">
-  <img src="imagens/frontend/storybook.svg" alt="Storybook" loading="lazy">
-  <div class="card-name">Storybook</div>
-</div>
-<div class="card" data-name="styled components">
-  <img src="imagens/frontend/styled_components.svg" alt="Styled Components" loading="lazy">
-  <div class="card-name">Styled Components</div>
-</div>
-<div class="card" data-name="tailwind css">
-  <img src="imagens/frontend/tailwind_css.svg" alt="Tailwind Css" loading="lazy">
-  <div class="card-name">Tailwind Css</div>
-</div>
-<div class="card" data-name="testing library">
-  <img src="imagens/frontend/testing_library.svg" alt="Testing Library" loading="lazy">
-  <div class="card-name">Testing Library</div>
-</div>
-<div class="card" data-name="vite">
-  <img src="imagens/frontend/vite.svg" alt="Vite" loading="lazy">
-  <div class="card-name">Vite</div>
-</div>
-<div class="card" data-name="webpack">
-  <img src="imagens/frontend/webpack.svg" alt="Webpack" loading="lazy">
-  <div class="card-name">Webpack</div>
-</div>
-<div class="card" data-name="zod">
-  <img src="imagens/frontend/zod.svg" alt="Zod" loading="lazy">
-  <div class="card-name">Zod</div>
-</div>
-<div class="card" data-name="zustand">
-  <img src="imagens/frontend/zustand.svg" alt="Zustand" loading="lazy">
-  <div class="card-name">Zustand</div>
-</div>
-<div class="card" data-name="active model serializers">
-  <img src="imagens/backend/active_model_serializers.svg" alt="Active Model Serializers" loading="lazy">
-  <div class="card-name">Active Model Serializers</div>
-</div>
-<div class="card" data-name="celery">
-  <img src="imagens/backend/celery.svg" alt="Celery" loading="lazy">
-  <div class="card-name">Celery</div>
-</div>
-<div class="card" data-name="class-validator">
-  <img src="imagens/backend/class-validator.svg" alt="Class-validator" loading="lazy">
-  <div class="card-name">Class-validator</div>
-</div>
-<div class="card" data-name="devise">
-  <img src="imagens/backend/devise.svg" alt="Devise" loading="lazy">
-  <div class="card-name">Devise</div>
-</div>
-<div class="card" data-name="factory bot">
-  <img src="imagens/backend/factory_bot.svg" alt="Factory Bot" loading="lazy">
-  <div class="card-name">Factory Bot</div>
-</div>
-<div class="card" data-name="laravel nova">
-  <img src="imagens/backend/laravel_nova.svg" alt="Laravel Nova" loading="lazy">
-  <div class="card-name">Laravel Nova</div>
-</div>
-<div class="card" data-name="laravel sanctum">
-  <img src="imagens/backend/laravel_sanctum.svg" alt="Laravel Sanctum" loading="lazy">
-  <div class="card-name">Laravel Sanctum</div>
-</div>
-<div class="card" data-name="laravel telescope">
-  <img src="imagens/backend/laravel_telescope.svg" alt="Laravel Telescope" loading="lazy">
-  <div class="card-name">Laravel Telescope</div>
-</div>
-<div class="card" data-name="mockery">
-  <img src="imagens/backend/mockery.svg" alt="Mockery" loading="lazy">
-  <div class="card-name">Mockery</div>
-</div>
-<div class="card" data-name="mongoose">
-  <img src="imagens/backend/mongoose.svg" alt="Mongoose" loading="lazy">
-  <div class="card-name">Mongoose</div>
-</div>
-<div class="card" data-name="node.js">
-  <img src="imagens/backend/node.js.svg" alt="Node.js" loading="lazy">
-  <div class="card-name">Node.js</div>
+  <img src="imagens/tools/postcss.svg" alt="PostCSS" loading="lazy">
+  <div class="card-name">PostCSS</div>
 </div>
 <div class="card" data-name="prisma">
-  <img src="imagens/backend/prisma.svg" alt="Prisma" loading="lazy">
+  <img src="imagens/tools/prisma.svg" alt="Prisma" loading="lazy">
   <div class="card-name">Prisma</div>
 </div>
 <div class="card" data-name="pundit">
-  <img src="imagens/backend/pundit.svg" alt="Pundit" loading="lazy">
+  <img src="imagens/tools/pundit.svg" alt="Pundit" loading="lazy">
   <div class="card-name">Pundit</div>
 </div>
 <div class="card" data-name="pydantic">
-  <img src="imagens/backend/pydantic.svg" alt="Pydantic" loading="lazy">
+  <img src="imagens/tools/pydantic.svg" alt="Pydantic" loading="lazy">
   <div class="card-name">Pydantic</div>
 </div>
+<div class="card" data-name="redux">
+  <img src="imagens/tools/redux.svg" alt="Redux" loading="lazy">
+  <div class="card-name">Redux</div>
+</div>
 <div class="card" data-name="rspec">
-  <img src="imagens/backend/rspec.svg" alt="Rspec" loading="lazy">
-  <div class="card-name">Rspec</div>
+  <img src="imagens/tools/rspec.svg" alt="RSpec" loading="lazy">
+  <div class="card-name">RSpec</div>
 </div>
 <div class="card" data-name="sidekiq">
-  <img src="imagens/backend/sidekiq.svg" alt="Sidekiq" loading="lazy">
+  <img src="imagens/tools/sidekiq.svg" alt="Sidekiq" loading="lazy">
   <div class="card-name">Sidekiq</div>
 </div>
-<div class="card" data-name="spatie packages">
-  <img src="imagens/backend/spatie_packages.svg" alt="Spatie Packages" loading="lazy">
-  <div class="card-name">Spatie Packages</div>
-</div>
 <div class="card" data-name="sqlalchemy">
-  <img src="imagens/backend/sqlalchemy.svg" alt="Sqlalchemy" loading="lazy">
-  <div class="card-name">Sqlalchemy</div>
+  <img src="imagens/tools/sqlalchemy.svg" alt="SQLAlchemy" loading="lazy">
+  <div class="card-name">SQLAlchemy</div>
+</div>
+<div class="card" data-name="storybook">
+  <img src="imagens/tools/storybook.svg" alt="Storybook" loading="lazy">
+  <div class="card-name">Storybook</div>
+</div>
+<div class="card" data-name="styled components">
+  <img src="imagens/tools/styled_components.svg" alt="Styled Components" loading="lazy">
+  <div class="card-name">Styled Components</div>
 </div>
 <div class="card" data-name="supertest">
-  <img src="imagens/backend/supertest.svg" alt="Supertest" loading="lazy">
+  <img src="imagens/tools/supertest.svg" alt="Supertest" loading="lazy">
   <div class="card-name">Supertest</div>
 </div>
+<div class="card" data-name="tailwind css">
+  <img src="imagens/tools/tailwind_css.svg" alt="Tailwind CSS" loading="lazy">
+  <div class="card-name">Tailwind CSS</div>
+</div>
+<div class="card" data-name="testing library">
+  <img src="imagens/tools/testing_library.svg" alt="Testing Library" loading="lazy">
+  <div class="card-name">Testing Library</div>
+</div>
 <div class="card" data-name="typeorm">
-  <img src="imagens/backend/typeorm.svg" alt="Typeorm" loading="lazy">
-  <div class="card-name">Typeorm</div>
+  <img src="imagens/tools/typeorm.svg" alt="TypeORM" loading="lazy">
+  <div class="card-name">TypeORM</div>
 </div>
-
-  </div>
+<div class="card" data-name="vite">
+  <img src="imagens/tools/vite.svg" alt="Vite" loading="lazy">
+  <div class="card-name">Vite</div>
 </div>
+<div class="card" data-name="webpack">
+  <img src="imagens/tools/webpack.svg" alt="Webpack" loading="lazy">
+  <div class="card-name">Webpack</div>
 </div>
-
-          <div id="geo-section" class="category-section">
-  <div class="category-title">geo</div>
-  <div class="grid">
-    <div class="card" data-name="gdal">
-  <img src="imagens/geo/gdal.svg" alt="Gdal" loading="lazy">
-  <div class="card-name">Gdal</div>
+<div class="card" data-name="yup">
+  <img src="imagens/tools/yup.svg" alt="Yup" loading="lazy">
+  <div class="card-name">Yup</div>
+</div>
+<div class="card" data-name="zod">
+  <img src="imagens/tools/zod.svg" alt="Zod" loading="lazy">
+  <div class="card-name">Zod</div>
+</div>
+<div class="card" data-name="zustand">
+  <img src="imagens/tools/zustand.svg" alt="Zustand" loading="lazy">
+  <div class="card-name">Zustand</div>
+</div>
+<div class="card" data-name="gdal">
+  <img src="imagens/geo/gdal.svg" alt="GDAL" loading="lazy">
+  <div class="card-name">GDAL</div>
+</div>
+<div class="card" data-name="geonode">
+  <img src="imagens/geo/geonode.svg" alt="GeoNode" loading="lazy">
+  <div class="card-name">GeoNode</div>
 </div>
 <div class="card" data-name="geopandas">
-  <img src="imagens/geo/geopandas.svg" alt="Geopandas" loading="lazy">
-  <div class="card-name">Geopandas</div>
+  <img src="imagens/geo/geopandas.svg" alt="GeoPandas" loading="lazy">
+  <div class="card-name">GeoPandas</div>
 </div>
 <div class="card" data-name="geoserver">
-  <img src="imagens/geo/geoserver.png" alt="Geoserver" loading="lazy">
-  <div class="card-name">Geoserver</div>
+  <img src="imagens/geo/geoserver.svg" alt="GeoServer" loading="lazy">
+  <div class="card-name">GeoServer</div>
+</div>
+<div class="card" data-name="leaflet">
+  <img src="imagens/geo/leaflet.svg" alt="Leaflet" loading="lazy">
+  <div class="card-name">Leaflet</div>
 </div>
 <div class="card" data-name="mapbox">
   <img src="imagens/geo/mapbox.svg" alt="Mapbox" loading="lazy">
   <div class="card-name">Mapbox</div>
 </div>
+<div class="card" data-name="openlayers">
+  <img src="imagens/geo/openlayers.svg" alt="OpenLayers" loading="lazy">
+  <div class="card-name">OpenLayers</div>
+</div>
 <div class="card" data-name="postgis">
-  <img src="imagens/geo/postgis.svg" alt="Postgis" loading="lazy">
-  <div class="card-name">Postgis</div>
+  <img src="imagens/geo/postgis.svg" alt="PostGIS" loading="lazy">
+  <div class="card-name">PostGIS</div>
 </div>
 <div class="card" data-name="qgis">
-  <img src="imagens/geo/qgis.svg" alt="Qgis" loading="lazy">
-  <div class="card-name">Qgis</div>
+  <img src="imagens/geo/qgis.svg" alt="QGIS" loading="lazy">
+  <div class="card-name">QGIS</div>
 </div>
 <div class="card" data-name="rasterio">
   <img src="imagens/geo/rasterio.svg" alt="Rasterio" loading="lazy">
@@ -1568,52 +550,461 @@
   <img src="imagens/geo/shapely.svg" alt="Shapely" loading="lazy">
   <div class="card-name">Shapely</div>
 </div>
+        </div>
+      </div>
+      
+    <div id="languages-section" class="category-section">
+      <div class="category-title">linguagens de programação</div>
+      <div class="grid">
+<div class="card" data-name="c#">
+  <img src="imagens/languages/c.svg" alt="C#" loading="lazy">
+  <div class="card-name">C#</div>
+</div>
+<div class="card" data-name="php">
+  <img src="imagens/languages/php.svg" alt="PHP" loading="lazy">
+  <div class="card-name">PHP</div>
+</div>
+<div class="card" data-name="python">
+  <img src="imagens/languages/python.svg" alt="Python" loading="lazy">
+  <div class="card-name">Python</div>
+</div>
+<div class="card" data-name="ruby">
+  <img src="imagens/languages/ruby.svg" alt="Ruby" loading="lazy">
+  <div class="card-name">Ruby</div>
+</div>
+<div class="card" data-name="typescript">
+  <img src="imagens/languages/typescript.svg" alt="TypeScript" loading="lazy">
+  <div class="card-name">TypeScript</div>
+</div>
+      </div>
+    </div>
+
+    <div id="ai-section" class="category-section">
+      <div class="category-title">ai</div>
+      <div class="grid">
+<div class="card" data-name="anthropic">
+  <img src="imagens/ai/anthropic.svg" alt="Anthropic" loading="lazy">
+  <div class="card-name">Anthropic</div>
+</div>
+<div class="card" data-name="chatgpt">
+  <img src="imagens/ai/chatgpt.svg" alt="ChatGPT" loading="lazy">
+  <div class="card-name">ChatGPT</div>
+</div>
+<div class="card" data-name="claude haiku 4.5">
+  <img src="imagens/ai/claude_haiku_4_5.svg" alt="Claude Haiku 4.5" loading="lazy">
+  <div class="card-name">Claude Haiku 4.5</div>
+</div>
+<div class="card" data-name="claude opus 4.5">
+  <img src="imagens/ai/claude_opus_4_5.svg" alt="Claude Opus 4.5" loading="lazy">
+  <div class="card-name">Claude Opus 4.5</div>
+</div>
+<div class="card" data-name="claude sonnet 4">
+  <img src="imagens/ai/claude_sonnet_4.svg" alt="Claude Sonnet 4" loading="lazy">
+  <div class="card-name">Claude Sonnet 4</div>
+</div>
+<div class="card" data-name="claude sonnet 4.5">
+  <img src="imagens/ai/claude_sonnet_4_5.svg" alt="Claude Sonnet 4.5" loading="lazy">
+  <div class="card-name">Claude Sonnet 4.5</div>
+</div>
+<div class="card" data-name="gemini 2.5 pro">
+  <img src="imagens/ai/gemini_2_5_pro.svg" alt="Gemini 2.5 Pro" loading="lazy">
+  <div class="card-name">Gemini 2.5 Pro</div>
+</div>
+<div class="card" data-name="gemini 3 flash">
+  <img src="imagens/ai/gemini_3_flash.svg" alt="Gemini 3 Flash" loading="lazy">
+  <div class="card-name">Gemini 3 Flash</div>
+</div>
+<div class="card" data-name="google ai">
+  <img src="imagens/ai/google_ai.svg" alt="Google AI" loading="lazy">
+  <div class="card-name">Google AI</div>
+</div>
+<div class="card" data-name="gpt-4">
+  <img src="imagens/ai/gpt_4.svg" alt="GPT-4" loading="lazy">
+  <div class="card-name">GPT-4</div>
+</div>
+<div class="card" data-name="gpt-4.1">
+  <img src="imagens/ai/gpt_4_1.svg" alt="GPT-4.1" loading="lazy">
+  <div class="card-name">GPT-4.1</div>
+</div>
+<div class="card" data-name="gpt-4o">
+  <img src="imagens/ai/gpt_4o.svg" alt="GPT-4o" loading="lazy">
+  <div class="card-name">GPT-4o</div>
+</div>
+<div class="card" data-name="openai">
+  <img src="imagens/ai/openai.svg" alt="OpenAI" loading="lazy">
+  <div class="card-name">OpenAI</div>
+</div>
+<div class="card" data-name="pytorch">
+  <img src="imagens/ai/pytorch.svg" alt="PyTorch" loading="lazy">
+  <div class="card-name">PyTorch</div>
+</div>
+<div class="card" data-name="scikit-learn">
+  <img src="imagens/ai/scikit_learn.svg" alt="Scikit-learn" loading="lazy">
+  <div class="card-name">Scikit-learn</div>
+</div>
+      </div>
+    </div>
+
+    <div id="frontend-section" class="category-section">
+      <div class="category-title">frontend</div>
+      <div class="grid">
+<div class="card" data-name="angular">
+  <img src="imagens/frontend/angular.svg" alt="Angular" loading="lazy">
+  <div class="card-name">Angular</div>
+</div>
+<div class="card" data-name="expo">
+  <img src="imagens/frontend/expo.svg" alt="Expo" loading="lazy">
+  <div class="card-name">Expo</div>
+</div>
+<div class="card" data-name="next.js">
+  <img src="imagens/frontend/next_js.svg" alt="Next.js" loading="lazy">
+  <div class="card-name">Next.js</div>
+</div>
+<div class="card" data-name="react">
+  <img src="imagens/frontend/react.svg" alt="React" loading="lazy">
+  <div class="card-name">React</div>
+</div>
+<div class="card" data-name="react native">
+  <img src="imagens/frontend/react_native.svg" alt="React Native" loading="lazy">
+  <div class="card-name">React Native</div>
+</div>
+<div class="card" data-name="vue.js">
+  <img src="imagens/frontend/vue_js.svg" alt="Vue.js" loading="lazy">
+  <div class="card-name">Vue.js</div>
+</div>
+      </div>
+    </div>
+
+    <div id="backend-section" class="category-section">
+      <div class="category-title">backend</div>
+      <div class="grid">
+<div class="card" data-name="fastapi">
+  <img src="imagens/backend/fastapi.svg" alt="FastAPI" loading="lazy">
+  <div class="card-name">FastAPI</div>
+</div>
+<div class="card" data-name="flask">
+  <img src="imagens/backend/flask.svg" alt="Flask" loading="lazy">
+  <div class="card-name">Flask</div>
+</div>
+<div class="card" data-name="laravel">
+  <img src="imagens/backend/laravel.svg" alt="Laravel" loading="lazy">
+  <div class="card-name">Laravel</div>
+</div>
+<div class="card" data-name="nestjs">
+  <img src="imagens/backend/nestjs.svg" alt="NestJS" loading="lazy">
+  <div class="card-name">NestJS</div>
+</div>
+<div class="card" data-name="ruby on rails">
+  <img src="imagens/backend/ruby_on_rails.svg" alt="Ruby on Rails" loading="lazy">
+  <div class="card-name">Ruby on Rails</div>
+</div>
+      </div>
+    </div>
+
+    <div id="database-section" class="category-section">
+      <div class="category-title">database</div>
+      <div class="grid">
+<div class="card" data-name="mongodb">
+  <img src="imagens/database/mongodb.svg" alt="MongoDB" loading="lazy">
+  <div class="card-name">MongoDB</div>
+</div>
+<div class="card" data-name="mysql">
+  <img src="imagens/database/mysql.svg" alt="MySQL" loading="lazy">
+  <div class="card-name">MySQL</div>
+</div>
+<div class="card" data-name="postgresql">
+  <img src="imagens/database/postgresql.svg" alt="PostgreSQL" loading="lazy">
+  <div class="card-name">PostgreSQL</div>
+</div>
+<div class="card" data-name="redis">
+  <img src="imagens/database/redis.svg" alt="Redis" loading="lazy">
+  <div class="card-name">Redis</div>
+</div>
+      </div>
+    </div>
+
+    <div id="devops-section" class="category-section">
+      <div class="category-title">devops</div>
+      <div class="grid">
+<div class="card" data-name="docker">
+  <img src="imagens/devops/docker.svg" alt="Docker" loading="lazy">
+  <div class="card-name">Docker</div>
+</div>
+<div class="card" data-name="github actions">
+  <img src="imagens/devops/github_actions.svg" alt="GitHub Actions" loading="lazy">
+  <div class="card-name">GitHub Actions</div>
+</div>
+<div class="card" data-name="grafana">
+  <img src="imagens/devops/grafana.svg" alt="Grafana" loading="lazy">
+  <div class="card-name">Grafana</div>
+</div>
+<div class="card" data-name="prometheus">
+  <img src="imagens/devops/prometheus.svg" alt="Prometheus" loading="lazy">
+  <div class="card-name">Prometheus</div>
+</div>
+<div class="card" data-name="terraform">
+  <img src="imagens/devops/terraform.svg" alt="Terraform" loading="lazy">
+  <div class="card-name">Terraform</div>
+</div>
+      </div>
+    </div>
+
+    <div id="tools-section" class="category-section">
+      <div class="category-title">tools</div>
+      <div class="grid">
+<div class="card" data-name="ant design">
+  <img src="imagens/tools/ant_design.svg" alt="Ant Design" loading="lazy">
+  <div class="card-name">Ant Design</div>
+</div>
+<div class="card" data-name="bootstrap">
+  <img src="imagens/tools/bootstrap.svg" alt="Bootstrap" loading="lazy">
+  <div class="card-name">Bootstrap</div>
+</div>
+<div class="card" data-name="celery">
+  <img src="imagens/tools/celery.svg" alt="Celery" loading="lazy">
+  <div class="card-name">Celery</div>
+</div>
+<div class="card" data-name="class-validator">
+  <img src="imagens/tools/class_validator.svg" alt="class-validator" loading="lazy">
+  <div class="card-name">class-validator</div>
+</div>
+<div class="card" data-name="cypress">
+  <img src="imagens/tools/cypress.svg" alt="Cypress" loading="lazy">
+  <div class="card-name">Cypress</div>
+</div>
+<div class="card" data-name="devise">
+  <img src="imagens/tools/devise.svg" alt="Devise" loading="lazy">
+  <div class="card-name">Devise</div>
+</div>
+<div class="card" data-name="docker compose">
+  <img src="imagens/tools/docker_compose.svg" alt="Docker Compose" loading="lazy">
+  <div class="card-name">Docker Compose</div>
+</div>
+<div class="card" data-name="esbuild">
+  <img src="imagens/tools/esbuild.svg" alt="esbuild" loading="lazy">
+  <div class="card-name">esbuild</div>
+</div>
+<div class="card" data-name="express.js">
+  <img src="imagens/tools/express_js.svg" alt="Express.js" loading="lazy">
+  <div class="card-name">Express.js</div>
+</div>
+<div class="card" data-name="factory bot">
+  <img src="imagens/tools/factory_bot.svg" alt="Factory Bot" loading="lazy">
+  <div class="card-name">Factory Bot</div>
+</div>
+<div class="card" data-name="inertia.js">
+  <img src="imagens/tools/inertia_js.svg" alt="Inertia.js" loading="lazy">
+  <div class="card-name">Inertia.js</div>
+</div>
+<div class="card" data-name="jest">
+  <img src="imagens/tools/jest.svg" alt="Jest" loading="lazy">
+  <div class="card-name">Jest</div>
+</div>
+<div class="card" data-name="kafka">
+  <img src="imagens/tools/kafka.svg" alt="Kafka" loading="lazy">
+  <div class="card-name">Kafka</div>
+</div>
+<div class="card" data-name="laravel breeze">
+  <img src="imagens/tools/laravel_breeze.svg" alt="Laravel Breeze" loading="lazy">
+  <div class="card-name">Laravel Breeze</div>
+</div>
+<div class="card" data-name="laravel nova">
+  <img src="imagens/tools/laravel_nova.svg" alt="Laravel Nova" loading="lazy">
+  <div class="card-name">Laravel Nova</div>
+</div>
+<div class="card" data-name="laravel sanctum">
+  <img src="imagens/tools/laravel_sanctum.svg" alt="Laravel Sanctum" loading="lazy">
+  <div class="card-name">Laravel Sanctum</div>
+</div>
+<div class="card" data-name="material ui">
+  <img src="imagens/tools/material_ui.svg" alt="Material UI" loading="lazy">
+  <div class="card-name">Material UI</div>
+</div>
+<div class="card" data-name="mockery">
+  <img src="imagens/tools/mockery.svg" alt="Mockery" loading="lazy">
+  <div class="card-name">Mockery</div>
+</div>
+<div class="card" data-name="mongoose">
+  <img src="imagens/tools/mongoose.svg" alt="Mongoose" loading="lazy">
+  <div class="card-name">Mongoose</div>
+</div>
+<div class="card" data-name="node.js">
+  <img src="imagens/tools/node_js.svg" alt="Node.js" loading="lazy">
+  <div class="card-name">Node.js</div>
+</div>
+<div class="card" data-name="numpy">
+  <img src="imagens/tools/numpy.svg" alt="NumPy" loading="lazy">
+  <div class="card-name">NumPy</div>
+</div>
+<div class="card" data-name="pandas">
+  <img src="imagens/tools/pandas.svg" alt="Pandas" loading="lazy">
+  <div class="card-name">Pandas</div>
+</div>
+<div class="card" data-name="passport.js">
+  <img src="imagens/tools/passport_js.svg" alt="Passport.js" loading="lazy">
+  <div class="card-name">Passport.js</div>
+</div>
+<div class="card" data-name="phpunit">
+  <img src="imagens/tools/phpunit.svg" alt="PHPUnit" loading="lazy">
+  <div class="card-name">PHPUnit</div>
+</div>
+<div class="card" data-name="postcss">
+  <img src="imagens/tools/postcss.svg" alt="PostCSS" loading="lazy">
+  <div class="card-name">PostCSS</div>
+</div>
+<div class="card" data-name="prisma">
+  <img src="imagens/tools/prisma.svg" alt="Prisma" loading="lazy">
+  <div class="card-name">Prisma</div>
+</div>
+<div class="card" data-name="pundit">
+  <img src="imagens/tools/pundit.svg" alt="Pundit" loading="lazy">
+  <div class="card-name">Pundit</div>
+</div>
+<div class="card" data-name="pydantic">
+  <img src="imagens/tools/pydantic.svg" alt="Pydantic" loading="lazy">
+  <div class="card-name">Pydantic</div>
+</div>
+<div class="card" data-name="redux">
+  <img src="imagens/tools/redux.svg" alt="Redux" loading="lazy">
+  <div class="card-name">Redux</div>
+</div>
+<div class="card" data-name="rspec">
+  <img src="imagens/tools/rspec.svg" alt="RSpec" loading="lazy">
+  <div class="card-name">RSpec</div>
+</div>
+<div class="card" data-name="sidekiq">
+  <img src="imagens/tools/sidekiq.svg" alt="Sidekiq" loading="lazy">
+  <div class="card-name">Sidekiq</div>
+</div>
+<div class="card" data-name="sqlalchemy">
+  <img src="imagens/tools/sqlalchemy.svg" alt="SQLAlchemy" loading="lazy">
+  <div class="card-name">SQLAlchemy</div>
+</div>
+<div class="card" data-name="storybook">
+  <img src="imagens/tools/storybook.svg" alt="Storybook" loading="lazy">
+  <div class="card-name">Storybook</div>
+</div>
+<div class="card" data-name="styled components">
+  <img src="imagens/tools/styled_components.svg" alt="Styled Components" loading="lazy">
+  <div class="card-name">Styled Components</div>
+</div>
+<div class="card" data-name="supertest">
+  <img src="imagens/tools/supertest.svg" alt="Supertest" loading="lazy">
+  <div class="card-name">Supertest</div>
+</div>
+<div class="card" data-name="tailwind css">
+  <img src="imagens/tools/tailwind_css.svg" alt="Tailwind CSS" loading="lazy">
+  <div class="card-name">Tailwind CSS</div>
+</div>
+<div class="card" data-name="testing library">
+  <img src="imagens/tools/testing_library.svg" alt="Testing Library" loading="lazy">
+  <div class="card-name">Testing Library</div>
+</div>
+<div class="card" data-name="typeorm">
+  <img src="imagens/tools/typeorm.svg" alt="TypeORM" loading="lazy">
+  <div class="card-name">TypeORM</div>
+</div>
+<div class="card" data-name="vite">
+  <img src="imagens/tools/vite.svg" alt="Vite" loading="lazy">
+  <div class="card-name">Vite</div>
+</div>
+<div class="card" data-name="webpack">
+  <img src="imagens/tools/webpack.svg" alt="Webpack" loading="lazy">
+  <div class="card-name">Webpack</div>
+</div>
+<div class="card" data-name="yup">
+  <img src="imagens/tools/yup.svg" alt="Yup" loading="lazy">
+  <div class="card-name">Yup</div>
+</div>
+<div class="card" data-name="zod">
+  <img src="imagens/tools/zod.svg" alt="Zod" loading="lazy">
+  <div class="card-name">Zod</div>
+</div>
+<div class="card" data-name="zustand">
+  <img src="imagens/tools/zustand.svg" alt="Zustand" loading="lazy">
+  <div class="card-name">Zustand</div>
+</div>
+      </div>
+    </div>
+
+    <div id="geo-section" class="category-section">
+      <div class="category-title">geo</div>
+      <div class="grid">
+<div class="card" data-name="gdal">
+  <img src="imagens/geo/gdal.svg" alt="GDAL" loading="lazy">
+  <div class="card-name">GDAL</div>
+</div>
+<div class="card" data-name="geonode">
+  <img src="imagens/geo/geonode.svg" alt="GeoNode" loading="lazy">
+  <div class="card-name">GeoNode</div>
+</div>
+<div class="card" data-name="geopandas">
+  <img src="imagens/geo/geopandas.svg" alt="GeoPandas" loading="lazy">
+  <div class="card-name">GeoPandas</div>
+</div>
+<div class="card" data-name="geoserver">
+  <img src="imagens/geo/geoserver.svg" alt="GeoServer" loading="lazy">
+  <div class="card-name">GeoServer</div>
+</div>
 <div class="card" data-name="leaflet">
-  <img src="imagens/frontend/leaflet.svg" alt="Leaflet" loading="lazy">
+  <img src="imagens/geo/leaflet.svg" alt="Leaflet" loading="lazy">
   <div class="card-name">Leaflet</div>
 </div>
+<div class="card" data-name="mapbox">
+  <img src="imagens/geo/mapbox.svg" alt="Mapbox" loading="lazy">
+  <div class="card-name">Mapbox</div>
+</div>
 <div class="card" data-name="openlayers">
-  <img src="imagens/frontend/openlayers.svg" alt="Openlayers" loading="lazy">
-  <div class="card-name">Openlayers</div>
+  <img src="imagens/geo/openlayers.svg" alt="OpenLayers" loading="lazy">
+  <div class="card-name">OpenLayers</div>
 </div>
+<div class="card" data-name="postgis">
+  <img src="imagens/geo/postgis.svg" alt="PostGIS" loading="lazy">
+  <div class="card-name">PostGIS</div>
+</div>
+<div class="card" data-name="qgis">
+  <img src="imagens/geo/qgis.svg" alt="QGIS" loading="lazy">
+  <div class="card-name">QGIS</div>
+</div>
+<div class="card" data-name="rasterio">
+  <img src="imagens/geo/rasterio.svg" alt="Rasterio" loading="lazy">
+  <div class="card-name">Rasterio</div>
+</div>
+<div class="card" data-name="shapely">
+  <img src="imagens/geo/shapely.svg" alt="Shapely" loading="lazy">
+  <div class="card-name">Shapely</div>
+</div>
+      </div>
+    </div>
 
+    </div>
   </div>
-</div>
-</div>
 
-    
-    <footer>
-      <p>Gerado automaticamente em 28/01/2026 às 16:17</p>
-      <p>Icons por <a href="https://devicon.dev" target="_blank">Devicon</a> e <a href="https://simpleicons.org" target="_blank">Simple Icons</a></p>
-    </footer>
-  </div>
-  
+  <footer>
+    <p>Gerado automaticamente em 29/01/2026 às 11:09 | 
+    <a href="https://github.com/h2o-innovation" target="_blank">GitHub: h2o-innovation</a></p>
+  </footer>
+
   <script>
-    const tabs = document.querySelectorAll('.tab');
-    const sections = document.querySelectorAll('.category-section');
-    const search = document.getElementById('search');
-    
-    tabs.forEach(tab => {
+    // Tab navigation
+    document.querySelectorAll('.tab').forEach(tab => {
       tab.addEventListener('click', () => {
         const category = tab.dataset.category;
         
-        tabs.forEach(t => t.classList.remove('active'));
+        // Update active tab
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
         
-        sections.forEach(s => s.classList.remove('active'));
-        document.getElementById(category + '-section').classList.add('active');
+        // Show corresponding section
+        document.querySelectorAll('.category-section').forEach(section => {
+          section.classList.remove('active');
+        });
         
-        search.value = '';
-      });
-    });
-    
-    search.addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase();
-      const cards = document.querySelectorAll('.card');
-      
-      cards.forEach(card => {
-        const name = card.dataset.name;
-        card.style.display = name.includes(query) ? 'block' : 'none';
+        if (category === 'all') {
+          document.getElementById('all-section').classList.add('active');
+        } else {
+          document.getElementById(category + '-section').classList.add('active');
+        }
       });
     });
   </script>
